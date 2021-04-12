@@ -1,0 +1,2 @@
+# Clipper
+Clipping's manager
