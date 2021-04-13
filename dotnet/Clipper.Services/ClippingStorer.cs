@@ -3,10 +3,11 @@ using Clipper.Services.Dtos;
 using Clipper.Domain.Base;
 using Clipper.Domain.Entities;
 using Clipper.Domain;
+using Clipper.Services.Abstractions;
 
 namespace Clipper.Services
 {
-    public class ClippingStorer
+    public class ClippingStorer : IClippingStorer
     {
         IRepository<Clipping> Repository { get; }
         private readonly IRepository<Book> Books;

@@ -3,10 +3,11 @@ using Clipper.Services.Dtos;
 using Clipper.Domain.Base;
 using Clipper.Domain.Entities;
 using Clipper.Domain;
+using Clipper.Services.Abstractions;
 
 namespace Clipper.Services
 {
-    public class AuthorStorer
+    public class AuthorStorer : IAuthorStorer
     {
         IRepositoryOfNamedEntity<Author> Repository { get; }
         public AuthorStorer(IRepositoryOfNamedEntity<Author> repository)

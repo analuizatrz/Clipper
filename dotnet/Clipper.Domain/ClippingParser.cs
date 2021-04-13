@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Clipper.Domain.Abstractions;
 
 namespace Clipper.Domain
 {
-    public class ClippingParser
+	public class ClippingParser : IClippingParser
     {
         private string TypeHighlightToken = "destaque";
         private string TypeBookmarkToken = "marcador";
