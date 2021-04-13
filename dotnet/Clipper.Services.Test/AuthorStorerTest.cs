@@ -34,7 +34,7 @@ namespace Clipper.Domain.Test.Entities
         }
         
         [Fact]
-        public void ShouldNotSaveAuthorWithSameNameAsOther()
+        public void ShouldNotStoreAuthorWithSameNameAsOther()
         {
             dto.Id = 323;
             var savedAuthor = new Author(dto.Name);
@@ -46,7 +46,7 @@ namespace Clipper.Domain.Test.Entities
         }
 
         [Fact]
-        public void ShouldChangeAuthor()
+        public void ShouldChangeAuthorName()
         {
             dto.Id = 323;
             var savedAuthor = new Author("Default");

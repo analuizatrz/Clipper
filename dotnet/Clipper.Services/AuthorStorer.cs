@@ -24,14 +24,14 @@ namespace Clipper.Services
 
             if (dto.Id > 0)
             {
-                var aluno = Repository.Get(dto.Id);
-                aluno.ChangeName(dto.Name);
+                var author = Repository.Get(dto.Id);
+                author.ChangeName(dto.Name);
             }
 
             if (dto.Id == 0)
             {
-                var aluno = new Author(dto.Name);
-                Repository.Save(aluno);
+                var author = new Author(dto.Name);
+                Repository.Save(author);
             }
         }
     }

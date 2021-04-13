@@ -29,3 +29,5 @@ dotnet add Clipper.Services.Test/ reference Clipper.Services
 dotnet add Clipper.Services.Test/ reference Clipper.Domain.Test
 dotnet add Clipper.Services.Test/ package moq
 ````
+
+## Services

@@ -8,5 +8,7 @@ namespace Clipper.Domain
         public static string ClippingShouldBeHighlightOrBookmark = "Clipping should be highlight or bookmark";
         public static string HighlightShouldHaveANonNullOrEmptyText = "Clipping highlighted should have a text";
         public static string AuthorWithSameName = "Author with same name already registered";
+        public static string BookWithSameName = "Book with same name already registered";
+        public static string AuthorDoesNotExists = "Author does not exists";
     }
 }

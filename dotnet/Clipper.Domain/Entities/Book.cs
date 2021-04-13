@@ -6,7 +6,11 @@ namespace Clipper.Domain.Entities
     {
         public Book(string name, Author author, string description, int edition, int year)
         {
-            DomainValidator
+           Change(name, author, description, edition, year);
+        }
+        public void Change(string name, Author author, string description, int edition, int year)
+        {
+             DomainValidator
                 .Create()
                 .When(name.IsNullOrEmpty(), Resources.NameShouldntBeEmpty)
                 .When(author.IsNull(), Resources.AuthorShouldntBeEmpty)
