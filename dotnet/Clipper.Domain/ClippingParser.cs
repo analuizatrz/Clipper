@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Clipper.Domain.Abstractions;
+using Clipper.Domain.Entities;
 
 namespace Clipper.Domain
 {
@@ -41,6 +42,13 @@ namespace Clipper.Domain
         public IEnumerable<ClippingModel> ParseAll(string content)
         {
             return content.Split(Separator).Select(c => Parse(c));
+        }
+        public Clipping Parse(ClippingModel model, Book book)
+        {
+            var page = model.Type == ClippingType.Bookmark ? int.Parse(model.Position[0]) : 0;
+            var locationStart = model.Type == ClippingType.Highlight ? int.Parse(model.Position[0]) : 0;
+            var locationEnd = model.Type == ClippingType.Highlight ? int.Parse(model.Position[1]) : 0;
+            return new Clipping(book, model.Type, page, locationStart, locationEnd, DateTime.Parse(model.Date), model.Text);
         }
     }
 }

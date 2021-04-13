@@ -1,5 +1,4 @@
 using Clipper.Domain.Base;
-using Clipper.Domain;
 using Clipper.Domain.Entities;
 using Clipper.Domain.Test.Builders;
 using Clipper.Domain.Test.Util;
@@ -7,7 +6,7 @@ using Xunit;
 
 namespace Clipper.Domain.Test.Entities
 {
-    public class ClippingTest
+	public class ClippingTest
     {
         [Fact]
         public void ClippingShouldBeHighlightOrBookmark()
