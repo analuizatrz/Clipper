@@ -1,4 +1,4 @@
-namespace Clipper.Domain.Clipping
+namespace Clipper.Domain
 {
     public enum ClippingType
     {

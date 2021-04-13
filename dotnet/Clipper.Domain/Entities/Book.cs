@@ -1,6 +1,6 @@
 using Clipper.Domain.Base;
 
-namespace Clipper.Domain.Clipping.Entities
+namespace Clipper.Domain.Entities
 {
     public class Book : EntityWithName
     {

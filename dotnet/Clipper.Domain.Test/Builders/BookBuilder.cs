@@ -1,5 +1,5 @@
 using System;
-using Clipper.Domain.Clipping.Entities;
+using Clipper.Domain.Entities;
 
 namespace Clipper.Domain.Test.Builders
 {

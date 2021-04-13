@@ -1,11 +1,11 @@
 using Clipper.Domain.Base;
-using Clipper.Domain.Clipping;
-using Clipper.Domain.Clipping.Entities;
+using Clipper.Domain;
+using Clipper.Domain.Entities;
 using Clipper.Domain.Test.Builders;
 using Clipper.Domain.Test.Util;
 using Xunit;
 
-namespace Clipper.Domain.Test.Clipping.Entities
+namespace Clipper.Domain.Test.Entities
 {
     public class ClippingTest
     {
@@ -16,7 +16,7 @@ namespace Clipper.Domain.Test.Clipping.Entities
                             .Default()
                             .WithType(ClippingType.None);
             
-            Clipper.Domain.Clipping.Entities.Clipping CreateWithInvalidType() => clippingBuilder.Build();
+            Clipping CreateWithInvalidType() => clippingBuilder.Build();
 
             Assert
                 .Throws<DomainException>(CreateWithInvalidType)
@@ -33,7 +33,7 @@ namespace Clipper.Domain.Test.Clipping.Entities
                             .WithType(ClippingType.Highlight)
                             .WithText(invalidText);
             
-            Clipper.Domain.Clipping.Entities.Clipping CreateWithInvalidType() => clippingBuilder.Build();
+            Clipping CreateWithInvalidType() => clippingBuilder.Build();
 
             Assert
                 .Throws<DomainException>(CreateWithInvalidType)
@@ -47,7 +47,7 @@ namespace Clipper.Domain.Test.Clipping.Entities
                             .Default()
                             .WithBook(null);
             
-            Clipper.Domain.Clipping.Entities.Clipping CreateWithInvalidName() => clippingBuilder.Build();
+            Clipping CreateWithInvalidName() => clippingBuilder.Build();
 
             Assert
                 .Throws<DomainException>(CreateWithInvalidName)

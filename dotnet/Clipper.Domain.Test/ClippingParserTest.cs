@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Clipper.Domain.Clipping;
+using Clipper.Domain;
 using Xunit;
 
-namespace Clipper.Domain.Test.Clipping
+namespace Clipper.Domain.Test
 {
     public class ClippingParserTest
     {

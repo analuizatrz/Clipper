@@ -1,6 +1,6 @@
 using System;
-using Clipper.Domain.Clipping;
-using Clipper.Domain.Clipping.Entities;
+using Clipper.Domain;
+using Clipper.Domain.Entities;
 
 namespace Clipper.Domain.Test.Builders
 {
@@ -44,16 +44,16 @@ namespace Clipper.Domain.Test.Builders
             Text = text;
             return this;
         }
-        public Clipper.Domain.Clipping.Entities.Clipping Build()
+        public Clipping Build()
         {
-            var book = new Clipper.Domain.Clipping.Entities.Clipping(Book, Type, Page, LocationStart, LocationEnd, Date, Text);
+            var clipping = new Clipping(Book, Type, Page, LocationStart, LocationEnd, Date, Text);
 
             if (Id > 0)
             {
-                var propertyInfo = book.GetType().GetProperty("Id");
-                propertyInfo.SetValue(book, Convert.ChangeType(Id, propertyInfo.PropertyType), null);
+                var propertyInfo = clipping.GetType().GetProperty("Id");
+                propertyInfo.SetValue(clipping, Convert.ChangeType(Id, propertyInfo.PropertyType), null);
             }
-            return book;
+            return clipping;
         }
     }
 }

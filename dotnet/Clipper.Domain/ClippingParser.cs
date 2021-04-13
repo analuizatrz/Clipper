@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Clipper.Domain.Clipping
+namespace Clipper.Domain
 {
     public class ClippingParser
     {

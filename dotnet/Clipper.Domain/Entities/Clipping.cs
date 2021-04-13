@@ -1,7 +1,8 @@
 using System;
 using Clipper.Domain.Base;
+using Clipper.Domain;
 
-namespace Clipper.Domain.Clipping.Entities
+namespace Clipper.Domain.Entities
 {
     public class Clipping : Entity
     {

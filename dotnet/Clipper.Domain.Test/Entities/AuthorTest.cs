@@ -1,9 +1,9 @@
 using Clipper.Domain.Base;
-using Clipper.Domain.Clipping.Entities;
+using Clipper.Domain.Entities;
 using Clipper.Domain.Test.Util;
 using Xunit;
 
-namespace Clipper.Domain.Test.Clipping.Entities
+namespace Clipper.Domain.Test.Entities
 {
     public class AuthorTest
     {
