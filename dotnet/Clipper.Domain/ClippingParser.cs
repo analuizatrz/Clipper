@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Clipper.Domain
@@ -35,6 +36,10 @@ namespace Clipper.Domain
             clipping.Text = clipping.Type == ClippingType.Highlight ? lines.LastOrDefault() : string.Empty;
 
             return clipping;
+        }
+        public IEnumerable<ClippingModel> ParseAll(string content)
+        {
+            return content.Split(Separator).Select(c => Parse(c));
         }
     }
 }

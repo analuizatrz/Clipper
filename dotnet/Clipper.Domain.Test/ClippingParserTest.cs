@@ -1,11 +1,10 @@
-using System;
 using System.Collections.Generic;
-using Clipper.Domain;
+using System.Linq;
 using Xunit;
 
 namespace Clipper.Domain.Test
 {
-    public class ClippingParserTest
+	public class ClippingParserTest
     {
         public IReadOnlyDictionary<string, string> clippings = new Dictionary<string, string>()
         { 
@@ -18,6 +17,16 @@ namespace Clipper.Domain.Test
 @"Homo Deus (Yuval Noah Harari)
 - Seu marcador ou posição 2278 | Adicionado: sexta-feira, 23 de novembro de 2018 00:32:29
 
+",
+            ["MultipleClippingBookmark"] =
+@"Homo Deus (Yuval Noah Harari)
+- Seu marcador ou posição 2278 | Adicionado: sexta-feira, 23 de novembro de 2018 00:32:29
+
+==========
+
+A arte de ser leve (Ferreira, Leila)
+- Seu destaque ou posição 1896-1897 | Adicionado: terça-feira, 29 de maio de 2018 10:37:11
+“Namore muito, mas não se case não”.
 "
         };
 
@@ -88,6 +97,18 @@ namespace Clipper.Domain.Test
         {
             var source = clippings[clipping];
             var actual = new ClippingParser().Parse(source).Text;
+            Assert.Equal(expected, actual);
+        }
+
+        [
+            Theory(),
+            InlineData("MultipleClippingBookmark", 0, "Yuval Noah Harari"),
+            InlineData("MultipleClippingBookmark", 1, "Ferreira, Leila"),
+        ]
+        public void WhenPasringAllShouldParseAuthorOfEveryClippingCorrectly(string clipping, int index, string expected)
+        {
+            var source = clippings[clipping];
+            var actual = new ClippingParser().ParseAll(source).ToList()[index].Author;
             Assert.Equal(expected, actual);
         }
     }
