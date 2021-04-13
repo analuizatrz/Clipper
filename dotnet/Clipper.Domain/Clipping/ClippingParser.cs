@@ -15,7 +15,7 @@ namespace Clipper.Domain.Clipping
             var lines = content.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
             var firstLine = lines.First().Replace(')', ' ').Split('(');
-            (clipping.Title, clipping.Author) = (firstLine[0].Trim(), firstLine[1].Trim());
+            (clipping.Book, clipping.Author) = (firstLine[0].Trim(), firstLine[1].Trim());
 
             var secondLine = lines[1].Split('|');
 

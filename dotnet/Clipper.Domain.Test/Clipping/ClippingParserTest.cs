@@ -37,10 +37,10 @@ namespace Clipper.Domain.Test.Clipping
             InlineData("SingleClippingHighlight", "A arte de ser leve"),
             InlineData("SingleClippingBookmark", "Homo Deus"),
         ]
-        public void ShouldParseTitleCorrectly(string clipping, string expected)
+        public void ShouldParseBookCorrectly(string clipping, string expected)
         {
             var source = clippings[clipping];
-            var actual = new ClippingParser().Parse(source).Title;
+            var actual = new ClippingParser().Parse(source).Book;
             Assert.Equal(expected, actual);
         }
         [
