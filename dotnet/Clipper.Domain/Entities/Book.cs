@@ -4,11 +4,11 @@ namespace Clipper.Domain.Entities
 {
     public class Book : EntityWithName
     {
-        public Book(string name, Author author, string description, int edition, int year)
+        public Book(string name, Author author, string description, int? edition, int? year)
         {
            Change(name, author, description, edition, year);
         }
-        public void Change(string name, Author author, string description, int edition, int year)
+        public void Change(string name, Author author, string description, int? edition, int? year)
         {
              DomainValidator
                 .Create()
@@ -24,7 +24,7 @@ namespace Clipper.Domain.Entities
         }
         public Author Author { get; private set; }
         public string Description { get; private set; }
-        public int Edition { get; private set; }
-        public int Year { get; private set; }
+        public int? Edition { get; private set; }
+        public int? Year { get; private set; }
     }
 }
