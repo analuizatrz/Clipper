@@ -10,5 +10,7 @@ namespace Clipper.Domain
         public static string AuthorWithSameName = "Author with same name already registered";
         public static string BookWithSameName = "Book with same name already registered";
         public static string AuthorDoesNotExists = "Author does not exists";
+        public static string BookDoesNotExists = "Book does not exists";
+        
     }
 }

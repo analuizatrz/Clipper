@@ -8,11 +8,15 @@ namespace Clipper.Domain.Entities
     {
         public Clipping(Book book, ClippingType type, int page, int locationStart, int locationEnd, DateTime date, string text)
         {
+            Change(book, type, page, locationStart, locationEnd, date, text);
+        }
+        public void Change(Book book, ClippingType type, int page, int locationStart, int locationEnd, DateTime date, string text)
+        {
             DomainValidator
                 .Create()
                 .When(type == ClippingType.None, Resources.ClippingShouldBeHighlightOrBookmark)
                 .When((type == ClippingType.Highlight) && text.IsNullOrEmpty(), Resources.HighlightShouldHaveANonNullOrEmptyText)
-                .When(Book.IsNull(), Resources.BookShouldntBeEmpty)
+                .When(book.IsNull(), Resources.BookShouldntBeEmpty)
                 .ThrowExceptionIfAnyErrors();
 
             Book = book;

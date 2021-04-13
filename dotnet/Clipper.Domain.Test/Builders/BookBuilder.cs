@@ -53,7 +53,11 @@ namespace Clipper.Domain.Test.Builders
             Year = year;
             return this;
         }
-
+        public BookBuilder WithId(long id)
+        {
+            Id = id;
+            return this;
+        }
         public Book Build()
         {
             var book = new Book(Name, Author, Description, Edition, Year);
