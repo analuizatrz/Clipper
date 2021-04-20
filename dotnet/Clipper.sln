@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipper.Services", "Clipper
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipper.Services.Test", "Clipper.Services.Test\Clipper.Services.Test.csproj", "{32A0DE80-B2D8-4D56-84AB-5B42DB21E681}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipper.Mvc", "Clipper.Mvc\Clipper.Mvc.csproj", "{3065B64A-EE97-4024-8ADE-FEEE727C6B75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{32A0DE80-B2D8-4D56-84AB-5B42DB21E681}.Release|x64.Build.0 = Release|Any CPU
 		{32A0DE80-B2D8-4D56-84AB-5B42DB21E681}.Release|x86.ActiveCfg = Release|Any CPU
 		{32A0DE80-B2D8-4D56-84AB-5B42DB21E681}.Release|x86.Build.0 = Release|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Debug|x64.Build.0 = Debug|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Debug|x86.Build.0 = Debug|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Release|x64.ActiveCfg = Release|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Release|x64.Build.0 = Release|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Release|x86.ActiveCfg = Release|Any CPU
+		{3065B64A-EE97-4024-8ADE-FEEE727C6B75}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
