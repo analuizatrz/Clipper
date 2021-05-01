@@ -9,11 +9,11 @@ namespace Clipper.Services
 {
     public class ClippingStorer : IClippingStorer
     {
-        IRepository<Clipping> Repository { get; }
-        private readonly IRepository<Book> Books;
+        IRepository<Clipping> Repository;
+        IRepository<Book> Books;
         public ClippingStorer(IRepository<Clipping> repository, IRepository<Book> books)
         {
-            this.Books = books;
+            Books = books;
             Repository = repository;
         }
         public void Store(ClippingDto dto)

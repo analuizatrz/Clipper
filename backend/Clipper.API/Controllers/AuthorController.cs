@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Clipper.Domain.Entities;
 using Clipper.Services;
+using Clipper.Services.Abstractions;
 using Clipper.Services.Base;
 using Clipper.Services.Dtos;
 using Microsoft.AspNetCore.Mvc;
@@ -17,14 +18,14 @@ namespace Clipper.API.Controllers
         /// <summary>
         /// Book's author
         /// </summary>
-        public AuthorController(IRepository<Author> repository, AuthorStorer storer)
+        public AuthorController(IRepository<Author> repository, IAuthorStorer storer)
         {
             Repository = repository;
             Storer = storer;
         }
 
         IRepository<Author> Repository { get; }
-        AuthorStorer Storer { get; }
+        IAuthorStorer Storer { get; }
         /// <summary>
         /// Returns all Authors
         /// </summary>

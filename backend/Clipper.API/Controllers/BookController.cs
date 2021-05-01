@@ -2,6 +2,7 @@
 using Clipper.Domain.Entities;
 using Clipper.Infra.Repositories;
 using Clipper.Services;
+using Clipper.Services.Abstractions;
 using Clipper.Services.Base;
 using Clipper.Services.Dtos;
 using Microsoft.AspNetCore.Mvc;
@@ -12,14 +13,14 @@ namespace Clipper.API.Controllers
     [Route("[controller]")]
     public class BookController : ControllerBase
     {
-        public BookController(Books repository, BookStorer storer)
+        public BookController(Books repository, IBookStorer storer)
         {
             Repository = repository;
             Storer = storer;
         }
 
         IRepository<Book> Repository { get; }
-        BookStorer Storer { get; }
+        IBookStorer Storer { get; }
 
         /// <summary>
         /// Returns all Books

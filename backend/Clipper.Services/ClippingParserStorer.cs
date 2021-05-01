@@ -6,7 +6,7 @@ using Clipper.Domain.Abstractions;
 
 namespace Clipper.Services
 {
-	public class ClippingParserStorer
+	public class ClippingParserStorer : IClippingParserStorer
     {
         IRepository<Clipping> Repository { get; }
         IClippingParserBookStorer BookStorer { get; }
@@ -21,6 +21,7 @@ namespace Clipper.Services
             BookStorer = bookStorer;
             Parser = parser;
         }
+
         public void Store(string content)
         {
             foreach (var clipping in Parser.ParseAll(content))

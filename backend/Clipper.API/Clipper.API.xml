@@ -9,7 +9,7 @@
             Book's author endpoint
             </summary>
         </member>
-        <member name="M:Clipper.API.Controllers.AuthorController.#ctor(Clipper.Services.Base.IRepository{Clipper.Domain.Entities.Author},Clipper.Services.AuthorStorer)">
+        <member name="M:Clipper.API.Controllers.AuthorController.#ctor(Clipper.Services.Base.IRepository{Clipper.Domain.Entities.Author},Clipper.Services.Abstractions.IAuthorStorer)">
             <summary>
             Book's author
             </summary>
@@ -77,6 +77,19 @@
                    "type" : 1,
                    "text" : "Fear of a name increases fear of the thing itself."
                  }
+            
+             </remarks>
+        </member>
+        <member name="M:Clipper.API.Controllers.ClippingController.Parse(System.String)">
+             <summary>
+             Creates multiple clippings by parsing the content provided. 
+             </summary>
+             <remarks>
+             Author and book will be created as well if there is not a author or book with the specified name in the system.
+             
+             Sample request:
+            
+             "A arte de ser leve (Ferreira, Leila)\n- Seu destaque ou posição 1896-1897 | Adicionado: terça-feira, 29 de maio de 2018 10:37:11\n“Namore muito, mas não se case não”."
             
              </remarks>
         </member>
