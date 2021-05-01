@@ -4,6 +4,7 @@ namespace Clipper.Domain.Entities
 {
     public class Book : EntityWithName
     {
+        private Book() { }
         public Book(string name, Author author, string description, int? edition, int? year)
         {
            Change(name, author, description, edition, year);

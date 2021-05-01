@@ -6,6 +6,7 @@ namespace Clipper.Domain.Entities
 {
     public class Clipping : Entity
     {
+        private Clipping() { }
         public Clipping(Book book, ClippingType type, int page, int locationStart, int locationEnd, DateTime date, string text)
         {
             Change(book, type, page, locationStart, locationEnd, date, text);

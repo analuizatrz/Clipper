@@ -1,15 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipper.Domain", "Clipper.Domain\Clipper.Domain.csproj", "{02CD9C41-2820-4CF4-87AA-E9D788388488}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clipper.Domain", "Clipper.Domain\Clipper.Domain.csproj", "{02CD9C41-2820-4CF4-87AA-E9D788388488}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipper.Domain.Test", "Clipper.Domain.Test\Clipper.Domain.Test.csproj", "{75CC22EB-D4CC-4083-B9CA-FC97317221A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clipper.Domain.Test", "Clipper.Domain.Test\Clipper.Domain.Test.csproj", "{75CC22EB-D4CC-4083-B9CA-FC97317221A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipper.Services", "Clipper.Services\Clipper.Services.csproj", "{83D03A34-739E-4190-AB7E-47EDDFEC56F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clipper.Services", "Clipper.Services\Clipper.Services.csproj", "{83D03A34-739E-4190-AB7E-47EDDFEC56F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipper.Services.Test", "Clipper.Services.Test\Clipper.Services.Test.csproj", "{32A0DE80-B2D8-4D56-84AB-5B42DB21E681}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clipper.Services.Test", "Clipper.Services.Test\Clipper.Services.Test.csproj", "{32A0DE80-B2D8-4D56-84AB-5B42DB21E681}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F456E11A-16A9-4AB2-890B-E18E6E1C5C83}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipper.API", "Clipper.API\Clipper.API.csproj", "{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipper.Infra", "Clipper.Infra\Clipper.Infra.csproj", "{D507CD87-D5A9-423C-9E7F-98B505AC9E15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +28,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{02CD9C41-2820-4CF4-87AA-E9D788388488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +78,35 @@ Global
 		{32A0DE80-B2D8-4D56-84AB-5B42DB21E681}.Release|x64.Build.0 = Release|Any CPU
 		{32A0DE80-B2D8-4D56-84AB-5B42DB21E681}.Release|x86.ActiveCfg = Release|Any CPU
 		{32A0DE80-B2D8-4D56-84AB-5B42DB21E681}.Release|x86.Build.0 = Release|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Debug|x64.Build.0 = Debug|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Debug|x86.Build.0 = Debug|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Release|x64.ActiveCfg = Release|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Release|x64.Build.0 = Release|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Release|x86.ActiveCfg = Release|Any CPU
+		{9C825FB1-D388-4F2A-9A69-280CBD36BCF1}.Release|x86.Build.0 = Release|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Debug|x64.Build.0 = Debug|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Debug|x86.Build.0 = Debug|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Release|x64.ActiveCfg = Release|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Release|x64.Build.0 = Release|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Release|x86.ActiveCfg = Release|Any CPU
+		{D507CD87-D5A9-423C-9E7F-98B505AC9E15}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFE5F75D-DD6B-4C4E-979F-B62EB47E75BD}
 	EndGlobalSection
 EndGlobal

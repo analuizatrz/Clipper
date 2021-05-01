@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Clipper.API</name>
+    </assembly>
+    <members>
+        <member name="T:Clipper.API.Controllers.AuthorController">
+            <summary>
+            Book's author endpoint
+            </summary>
+        </member>
+        <member name="M:Clipper.API.Controllers.AuthorController.#ctor(Clipper.Services.Base.IRepository{Clipper.Domain.Entities.Author},Clipper.Services.Abstractions.IAuthorStorer)">
+            <summary>
+            Book's author
+            </summary>
+        </member>
+        <member name="M:Clipper.API.Controllers.AuthorController.Get">
+            <summary>
+            Returns all Authors
+            </summary>
+            <returns>All saved authors</returns>
+        </member>
+        <member name="M:Clipper.API.Controllers.AuthorController.Post(Clipper.Services.Dtos.AuthorDto)">
+             <summary>
+             Creates an Author
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Author
+                 {
+                   "name": "J. K. Rowling"
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:Clipper.API.Controllers.BookController.Get">
+            <summary>
+            Returns all Books
+            </summary>
+            <returns>All saved books</returns>
+        </member>
+        <member name="M:Clipper.API.Controllers.BookController.Post(Clipper.Services.Dtos.BookDto)">
+             <summary>
+             Creates a Book, of an existing author
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Book
+                 {
+                   "Name": "Harry Potter and the Sorcerer's Stone",
+                   "AuthorId": 1,
+                   "Description": "A book of witchcraft and wizardry",
+                   "Edition": 1,
+                   "Year": 1999
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:Clipper.API.Controllers.ClippingController.Get">
+            <summary>
+            Returns all Clippings
+            </summary>
+            <returns>All saved clippings</returns>
+        </member>
+        <member name="M:Clipper.API.Controllers.ClippingController.Post(Clipper.Services.Dtos.ClippingDto)">
+             <summary>
+             Creates a Clipping, which is a highlight (Type = 1) or a bookmark (Type = 2), of an existing book.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Clipping
+                 {
+                   "bookId" : 1,
+                   "type" : 1,
+                   "text" : "Fear of a name increases fear of the thing itself."
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:Clipper.API.Controllers.ClippingController.Parse(System.String)">
+             <summary>
+             Creates multiple clippings by parsing the content provided. 
+             </summary>
+             <remarks>
+             Author and book will be created as well if there is not a author or book with the specified name in the system.
+             
+             Sample request:
+            
+             "A arte de ser leve (Ferreira, Leila)\n- Seu destaque ou posição 1896-1897 | Adicionado: terça-feira, 29 de maio de 2018 10:37:11\n“Namore muito, mas não se case não”."
+            
+             </remarks>
+        </member>
+    </members>
+</doc>
