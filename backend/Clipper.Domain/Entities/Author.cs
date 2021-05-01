@@ -4,6 +4,7 @@ namespace Clipper.Domain.Entities
 {
     public class Author : EntityWithName
     {
+        private Author() {}
         public Author(string name)
         {
             ChangeName(name);
