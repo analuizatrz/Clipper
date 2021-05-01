@@ -18,15 +18,35 @@ namespace Clipper.API.Controllers
             Storer = storer;
         }
 
-        public IRepository<Book> Repository { get; }
-        public BookStorer Storer { get; }
+        IRepository<Book> Repository { get; }
+        BookStorer Storer { get; }
 
+        /// <summary>
+        /// Returns all Books
+        /// </summary>
+        /// <returns>All saved books</returns>
         [HttpGet]
         public IEnumerable<Book> Get()
         {
             return Repository.All();
         }
 
+        /// <summary>
+        /// Creates a Book, of an existing author
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /Book
+        ///     {
+        ///       "Name": "Harry Potter and the Sorcerer's Stone",
+        ///       "AuthorId": 1,
+        ///       "Description": "A book of witchcraft and wizardry",
+        ///       "Edition": 1,
+        ///       "Year": 1999
+        ///     }
+        ///
+         /// </remarks>
         [HttpPost]
         public void Post(BookDto author)
         {
