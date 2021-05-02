@@ -1,7 +1,17 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <HelloWorld />
+    <v-row justify="center">
+      <a
+        v-for="(link, i) in importantLinks"
+        :key="i"
+        :href="link.href"
+        class="subheading mx-3"
+        target="_blank"
+      >
+        {{ link.text }}
+      </a>
+    </v-row>
   </div>
 </template>
 
@@ -11,8 +21,8 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 @Component({
   components: {
-    HelloWorld,
-  },
+    HelloWorld
+  }
 })
 export default class Home extends Vue {}
 </script>
