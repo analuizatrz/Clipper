@@ -1,14 +1,13 @@
 <template>
   <v-app>
-    <v-app-bar app dense dark>
-      <div class="text-primary">
+    <header class="top-bar" app dense dark>
+      <div class="top-bar-title">
         <h1>Clipper</h1>
       </div>
-      <v-space />
-    </v-app-bar>
-    <v-main>
+    </header>
+    <main>
       <router-view />
-    </v-main>
+    </main>
   </v-app>
 </template>
 
@@ -20,6 +19,19 @@ export default Vue.extend({
 
   data: () => ({
     //
-  }),
+  })
 });
 </script>
+<style>
+.top-bar {
+  padding: 0;
+  margin: 0;
+  background-color: #222;
+  color: #eee;
+}
+
+.top-bar-title {
+  padding: 0.5rem 1rem;
+  font-family: Roboto, sans-serif;
+}
+</style>

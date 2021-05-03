@@ -2,8 +2,8 @@ export default class Author {
   id: number;
   name: string;
 
-  constructor(id: number, name: string) {
-    this.id = id;
+  constructor(name: string, id?: number) {
+    this.id = id || 0;
     this.name = name;
   }
 }
