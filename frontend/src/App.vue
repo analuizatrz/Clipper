@@ -1,13 +1,14 @@
 <template>
   <v-app>
-    <header class="top-bar" app dense dark>
-      <div class="top-bar-title">
-        <h1>Clipper</h1>
-      </div>
-    </header>
-    <main>
+    <v-app-bar dense app>
+      <v-tabs centered>
+        <v-tab key="clippings" to="/">Clippings</v-tab>
+        <v-tab key="edit" to="/about">Edit</v-tab>
+      </v-tabs>
+    </v-app-bar>
+    <div class="pt-8">
       <router-view />
-    </main>
+    </div>
   </v-app>
 </template>
 
