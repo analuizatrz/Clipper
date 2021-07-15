@@ -1,32 +1,38 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <v-app>
+    <v-app-bar dense app>
+      <v-tabs centered>
+        <v-tab key="clippings" to="/">Clippings</v-tab>
+        <v-tab key="edit" to="/about">Edit</v-tab>
+      </v-tabs>
+    </v-app-bar>
+    <div class="pt-8">
+      <router-view />
     </div>
-    <router-view/>
-  </div>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+  name: 'App',
+
+  data: () => ({
+    //
+  })
+});
+</script>
+<style>
+.top-bar {
+  padding: 0;
+  margin: 0;
+  background-color: #222;
+  color: #eee;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.top-bar-title {
+  padding: 0.5rem 1rem;
+  font-family: Roboto, sans-serif;
 }
 </style>
